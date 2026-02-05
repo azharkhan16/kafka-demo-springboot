@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: producer
+
+  # Kafka producer credentials
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092

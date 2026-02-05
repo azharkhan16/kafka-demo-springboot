@@ -1,0 +1,39 @@
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Logs =====
+*.log
+
+# ===== Environment =====
+.env
+*.env
+
+# ===== Maven =====
+/target/
+**/target/
+
+# ===== Gradle =====
+/build/
+**/build/
+
+# ===== IntelliJ IDEA =====
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# ===== VS Code =====
+.vscode/
+
+# ===== Eclipse / STS =====
+.project
+.classpath
+.settings/
+.factorypath
+.springBeans
+.sts4-cache/
+.apt_generated
+
+# ===== Maven Wrapper =====
+.mvn/wrapper/maven-wrapper.jar
