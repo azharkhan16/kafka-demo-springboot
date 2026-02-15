@@ -16,6 +16,12 @@ public class KafkaConsumer {
         System.out.println("Received Message 2: " + message);
     }
 
+    @KafkaListener(topics = "my-topic-new", groupId = "my-new-group-rider")
+    public void listenRiderLocation(RiderLocation location) {
+        System.out.println("Received location: " + location.getRiderId()
+        + " : " + location.getLatitude() + " : " + location.getLongitude());
+    }
+
 
 }
 
