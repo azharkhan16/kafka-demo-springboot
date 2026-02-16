@@ -1,14 +1,19 @@
 spring:
   application:
     name: producer
-
-  # Kafka producer credentials
-  kafka:
-    producer:
-      bootstrap-servers: localhost:9092
-
   # Spring cloud Function credentials
   cloud:
     function:
-      definition: uppercase
-    function.web.path: /uppercase
+      definition: sendRiderLocation
+    stream:
+      function:
+        definition: sendRiderLocation
+      bindings:
+        sendRiderLocation-out-0:
+          destination: my-topic-new
+          content-type: application/json
+      poller:
+        fixed-delay: 5000
+      kafka:
+        binder:
+          brokers: localhost:9092
